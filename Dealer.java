@@ -12,20 +12,20 @@ public class Dealer extends Player
      */
     public Dealer()
     {
-        super("Dealer", -1, -1);
+        super("Dealer", -1, 500);
     }
     
     public void playTurn() 
     {
         //if (d.getValue() < 17)
-        //  hit();
+        // hit();
         //else if(d.getValue() >= 17)
-        //  stay();
+        // stay();
     }
     
     public void hit()
     {
- 
+
     }
     
     public void stay()

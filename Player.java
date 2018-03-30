@@ -29,7 +29,7 @@ public class Player extends Game
     
     public void bet()
     {
-        System.out.println("How much would you like to bet?");
+        System.out.println("How much would you like to bet? (You have $500)");
         double betMoney = scan.nextInt();
         System.out.print("Your Bet: $" + betMoney);
         money -= betMoney;
@@ -51,7 +51,8 @@ public class Player extends Game
     
     public void hit()
     {
-        
+        //hand.add(deck.deal());
+        //System.out.println(hand);
     }
     
     public void stay()
@@ -80,7 +81,7 @@ public class Player extends Game
     
     public String toString()
     {
-        return "The status of the hand is ";
+        return "You are currently playing";
     }
 
 }

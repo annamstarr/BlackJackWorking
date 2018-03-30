@@ -9,7 +9,6 @@ import java.util.Random;
 public class Deck
 {
     private ArrayList<Card> deck;
-    
     /**
      * Constructor for objects of class Deck
      */
@@ -23,15 +22,21 @@ public class Deck
     public void initializeDeck()
     {
         String[] suits = {"Hearts", "Clubs", "Spades", "Diamonds"};
-        String[] ranks = {"Ace", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "nine", "Ten", "Jack", "Queen", "King"};
+        String[] ranks = {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "nine", "Ten", "Jack", "Queen", "King", "Ace"};
         for(String s: suits) {
             int value = 1;
             for(String r : ranks) {
                 Card temp = new Card (value, s, r);
-                value ++;
+                value++;
                 deck.add(temp);
             }
         }
+        resetWrongValues();
+    }
+    
+    public void resetWrongValues()
+    {
+        // change values of face cards to 10 and determine ace value
     }
     
     public void shuffle()
@@ -48,7 +53,7 @@ public class Deck
     
     public Card deal()
     {
-        return null;
+        return deck.remove(0);
     }
     
     public void printDeck() 
